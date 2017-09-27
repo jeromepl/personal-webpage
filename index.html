@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jérôme Parent-Lévesque - Web Developer</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+    </head>
+    <body>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br>
+                Web Developer Enthusiast
+            </p>
+            </div>
+
+
+        <script type="text/javascript">
+            var BG_COLORS = [ // All possible background colors for panels
+                "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e",
+                "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50",
+                "#f1c40f", "#e67e22", "#e74c3c",
+                "#f39c12", "#d35400", "#c0392b"
+            ];
+            var panels = document.querySelectorAll(".panel");
+            var initialPanelPositions = ["center"]; // The first panel will always be centered
+            var currentPanel = 0;
+
+            for (var i = 0; i < panels.length; i++) {
+                if (i !== 0) {
+                    // Position each subsequent panel around the first one in a random location
+                    var randDir = Math.floor(Math.random() * 4);
+                    var pos;
+                    switch (randDir) {
+                        case 0:
+                            pos = "right";
+                            break;
+                        case 1:
+                            pos = "left";
+                            break;
+                        case 2:
+                            pos = "top";
+                            break;
+                        case 3:
+                            pos = "bottom";
+                            break;
+                    }
+                    initialPanelPositions[i] = pos;
+                    panels[i].className = "panel " + pos;
+                } else {
+                    panels[i].className = "panel " + initialPanelPositions[0];
+                }
+
+                // Pick a random background color for each panel
+                var rand = Math.floor(Math.random() * BG_COLORS.length);
+                panels[i].style.backgroundColor = BG_COLORS[rand];
+            }
+
+            document.addEventListener("wheel", (function debounce() {
+                var time = 0;
+                var totalDeltaY = 0;
+
+                return function (e) {
+                    var currentTime = Date.now();
+                    if (currentTime - time > 300) {
+                        totalDeltaY = 0;
+                    }
+                    totalDeltaY += e.deltaY;
+                    time = currentTime;
+                    
+                    if (totalDeltaY <= -100) {
+                        showPreviousPanel();
+                        totalDeltaY = 0;
+                    } else if (totalDeltaY >= 100) {
+                        showNextPanel();
+                        totalDeltaY = 0;
+                    }
+                };
+            })()
+            );
+
+            function showNextPanel() {
+                if (currentPanel < panels.length - 1) {
+                    currentPanel++;
+                    var panel = panels[currentPanel];
+                    panel.className = "panel center";
+                }
+            }
+
+            function showPreviousPanel() {
+                if (currentPanel > 0) {
+                    var panel = panels[currentPanel];
+                    panel.className = "panel " + initialPanelPositions[currentPanel];
+                    currentPanel--;
+                }
+            }
+        </script>
+    </body>
+</html>
