@@ -92,28 +92,27 @@
                 panels[i].style.backgroundColor = BG_COLORS[rand];
             }
 
-            document.addEventListener("wheel", (function debounce() {
-                var time = 0;
-                var totalDeltaY = 0;
+            document.addEventListener("wheel", (function throttle() {
+                var lastCallTime = 0;
+                var lastPanelChangeTime = 0;
 
                 return function (e) {
                     var currentTime = Date.now();
-                    if (currentTime - time > 300) {
-                        totalDeltaY = 0;
+                    // Prevent sliding more than one panel in 500ms or if continuous scrolls have occured
+                    if (currentTime - lastPanelChangeTime <= 500 || currentTime - lastCallTime <= 50) {
+                        lastCallTime = currentTime;
+                        return;
                     }
-                    totalDeltaY += e.deltaY;
-                    time = currentTime;
+                    lastCallTime = currentTime;
+                    lastPanelChangeTime = currentTime;
                     
-                    if (totalDeltaY <= -100) {
+                    if (e.deltaY <= 0) {
                         showPreviousPanel();
-                        totalDeltaY = 0;
-                    } else if (totalDeltaY >= 100) {
+                    } else {
                         showNextPanel();
-                        totalDeltaY = 0;
                     }
                 };
-            })()
-            );
+            })());
 
             function showNextPanel() {
                 if (currentPanel < panels.length - 1) {
