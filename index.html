@@ -122,21 +122,27 @@
                     var value = e.wheelDelta || -e.deltaY || -e.detail;
                     var delta = Math.max(-1, Math.min(1, value));
 
-                    //Limiting the array to 150 (lets not waist memory!)
-                    if(scrollings.length > 149){
+                    //Limiting the array to 150 entries
+                    if(scrollings.length > 70){
                         scrollings.shift();
                     }
 
                     //keeping record of the previous scrollings
                     scrollings.push(Math.abs(value));
                     var timeDiff = currentTime-prevTime;
+
+                    if(timeDiff>200)
+                    {
+                        scrollings = [];
+                    }
+
                     prevTime = currentTime;
 
-                    if(canScroll){//if theres any #
+                    if(canScroll){
 
                     var averageEnd = getAverage(scrollings, 10);
                     var averageMiddle = getAverage(scrollings, 70);
-                    var isAccelerating = averageEnd >= averageMiddle;
+                    var isAccelerating = averageEnd > averageMiddle;
 
                     if(isAccelerating){
                     //scrolling down?
@@ -149,19 +155,6 @@
                     }
                 }
             }
-                    // if (currentTime - time > 300) {
-                    //     totalDeltaY = 0;
-                    // }
-                    // totalDeltaY += e.deltaY;
-                    // time = currentTime;
-                    
-                    // if (totalDeltaY <= -100) {
-                    //     showPreviousPanel();
-                    //     totalDeltaY = 0;
-                    // } else if (totalDeltaY >= 100) {
-                    //     showNextPanel();
-                    //     totalDeltaY = 0;
-                    // }
                 };
             })()
             );
@@ -172,7 +165,7 @@
                     canScroll = false;
                     setTimeout(function(){
                     canScroll = true;
-                        }, 500);
+                        }, 1000);
 
                     if(dir=="up"){
                         showPreviousPanel();
