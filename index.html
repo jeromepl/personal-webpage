@@ -48,7 +48,8 @@
                 <br>
                 Web Developer Enthusiast
             </p>
-            </div>
+            <button class="goToTop">Back to Top</button>
+        </div>
 
 
         <script type="text/javascript">
@@ -188,6 +189,14 @@
                 }
   
             }
+
+            var topBtnElements = document.querySelectorAll(".goToTop");
+            for (var i = 0; i < topBtnElements.length; i++) {
+                topBtnElements[i].addEventListener("click", function(e) {
+                    goToPanel(0);
+                });
+            }
+
             function showNextPanel() {
                 if (currentPanel < panels.length - 1) {
                     currentPanel++;
@@ -201,6 +210,15 @@
                     var panel = panels[currentPanel];
                     panel.className = "panel " + initialPanelPositions[currentPanel];
                     currentPanel--;
+                }
+            }
+
+            function goToPanel(panelIndex) {
+                if (panelIndex >= 0 && panelIndex < panels.length) {
+                    var nextPanel = panelIndex < currentPanel ? showPreviousPanel : showNextPanel;
+                    while (currentPanel !== panelIndex) {
+                        nextPanel();
+                    }
                 }
             }
         </script>
