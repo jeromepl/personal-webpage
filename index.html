@@ -63,8 +63,6 @@
             var initialPanelPositions = ["center"]; // The first panel will always be centered
             var currentPanel = 0;
 
-            var canScroll = true;
-            var scrollings = [];
             var previousDir;
             var previousColor;
 
@@ -108,87 +106,27 @@
                 panels[i].style.backgroundColor = BG_COLORS[randColor];
             }
 
-            /**
-            * Gets the average of the last `number` elements of the given array.
-            */
-            function getAverage(elements, number){
-                var sum = 0;
-
-                //taking `number` elements from the end to make the average, if there are not enought, 1
-                var lastElements = elements.slice(Math.max(elements.length - number, 1));
-
-                for(var i = 0; i < lastElements.length; i++){
-                    sum = sum + lastElements[i];
-                }
-                return Math.ceil(sum/number);
-            }
-
-            var prevTime = new Date().getTime();
-
-            document.addEventListener("wheel", (function debounce() {
-                var time = 0;
-                var totalDeltaY = 0;
+            document.addEventListener("wheel", (function throttle() {
+                var lastCallTime = 0;
+                var lastPanelChangeTime = 0;
 
                 return function (e) {
                     var currentTime = Date.now();
-
-                    var value = e.wheelDelta || -e.deltaY || -e.detail;
-                    var delta = Math.max(-1, Math.min(1, value));
-
-                    //Limiting the array to 150 entries
-                    if(scrollings.length > 70){
-                        scrollings.shift();
+                    // Prevent sliding more than one panel in 500ms or if continuous scrolls have occured
+                    if (currentTime - lastPanelChangeTime <= 500 || currentTime - lastCallTime <= 50) {
+                        lastCallTime = currentTime;
+                        return;
                     }
-
-                    //keeping record of the previous scrollings
-                    scrollings.push(Math.abs(value));
-                    var timeDiff = currentTime-prevTime;
-
-                    if(timeDiff>200)
-                    {
-                        scrollings = [];
-                    }
-
-                    prevTime = currentTime;
-
-                    if(canScroll){
-
-                    var averageEnd = getAverage(scrollings, 10);
-                    var averageMiddle = getAverage(scrollings, 70);
-                    var isAccelerating = averageEnd > averageMiddle;
-
-                    if(isAccelerating){
-                    //scrolling down?
-                    if (delta < 0) {
-                        scrollPanel('down');
-
-                    //scrolling up?
-                    }else {
-                        scrollPanel('up');
-                    }
-                }
-            }
-                };
-            })()
-            );
-            
-            function scrollPanel(dir){
-                if(canScroll)
-                {
-                    canScroll = false;
-                    setTimeout(function(){
-                    canScroll = true;
-                        }, 1000);
-
-                    if(dir=="up"){
+                    lastCallTime = currentTime;
+                    lastPanelChangeTime = currentTime;
+                    
+                    if (e.deltaY <= 0) {
                         showPreviousPanel();
-                    }else if(dir=="down")
-                    {
+                    } else {
                         showNextPanel();
                     }
                 }
-  
-            }
+            })());
 
             var topBtnElements = document.querySelectorAll(".goToTop");
             for (var i = 0; i < topBtnElements.length; i++) {
