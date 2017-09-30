@@ -64,11 +64,18 @@
 
             var canScroll = true;
             var scrollings = [];
+            var previousDir;
+            var previousColor;
 
             for (var i = 0; i < panels.length; i++) {
                 if (i !== 0) {
                     // Position each subsequent panel around the first one in a random location
-                    var randDir = Math.floor(Math.random() * 4);
+                    var randDir;
+                    do {
+                        randDir = Math.floor(Math.random() * 4);
+                    } while (randDir === previousDir);
+                    previousDir = randDir;
+
                     var pos;
                     switch (randDir) {
                         case 0:
@@ -91,8 +98,13 @@
                 }
 
                 // Pick a random background color for each panel
-                var rand = Math.floor(Math.random() * BG_COLORS.length);
-                panels[i].style.backgroundColor = BG_COLORS[rand];
+                var randColor;
+                do {
+                   randColor = Math.floor(Math.random() * BG_COLORS.length);
+                } while (randColor === previousColor);
+                previousColor = randColor;
+
+                panels[i].style.backgroundColor = BG_COLORS[randColor];
             }
 
             /**
