@@ -51,6 +51,8 @@ for (var i = 0; i < panels.length; i++) {
     panels[i].style.backgroundColor = BG_COLORS[randColor];
 }
 
+updateProgressBar(); // Update the progress bar initially
+
 document.addEventListener("wheel", (function throttle() {
     var lastCallTime = 0;
     var lastPanelChangeTime = 0;
@@ -73,18 +75,12 @@ document.addEventListener("wheel", (function throttle() {
     }
 })());
 
-var topBtnElements = document.querySelectorAll(".goToTop");
-for (var i = 0; i < topBtnElements.length; i++) {
-    topBtnElements[i].addEventListener("click", function(e) {
-        goToPanel(0);
-    });
-}
-
 function showNextPanel() {
     if (currentPanel < panels.length - 1) {
         currentPanel++;
         var panel = panels[currentPanel];
         panel.className = "panel center";
+        updateProgressBar();
     }
 }
 
@@ -93,6 +89,7 @@ function showPreviousPanel() {
         var panel = panels[currentPanel];
         panel.className = "panel " + initialPanelPositions[currentPanel];
         currentPanel--;
+        updateProgressBar();
     }
 }
 
@@ -103,4 +100,9 @@ function goToPanel(panelIndex) {
             nextPanel();
         }
     }
+}
+
+function updateProgressBar() {
+    var progressBar = document.querySelector("#progress-bar");
+    progressBar.style.width = ((currentPanel + 1) / panels.length * 100) + "%";
 }
