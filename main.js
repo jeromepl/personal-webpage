@@ -49,6 +49,23 @@ for (var i = 0; i < panels.length; i++) {
 
 updateProgressBar(); // Update the progress bar initially
 
+document.addEventListener("keydown",function(e){  
+      switch(e.key){
+        case "ArrowUp":
+            showPreviousPanel();
+            break;
+        case "ArrowDown":
+            showNextPanel();
+            break;
+        case "ArrowLeft": 
+            showPreviousPanel();
+            break;
+        case "ArrowRight":
+            showNextPanel();
+            break;
+    }
+})
+
 document.addEventListener("wheel", (function throttle() {
     var lastCallTime = 0;
     var lastPanelChangeTime = 0;
