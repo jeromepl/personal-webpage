@@ -42,13 +42,9 @@ for (var i = 0; i < panels.length; i++) {
     }
 
     // Pick a random background color for each panel
-    var randColor;
-    do {
-       randColor = Math.floor(Math.random() * BG_COLORS.length);
-    } while (randColor === previousColor);
-    previousColor = randColor;
-
+    var randColor = Math.floor(Math.random() * BG_COLORS.length);
     panels[i].style.backgroundColor = BG_COLORS[randColor];
+    BG_COLORS.splice(randColor, 1); // Remove the color so it isn't used anymore
 }
 
 updateProgressBar(); // Update the progress bar initially
