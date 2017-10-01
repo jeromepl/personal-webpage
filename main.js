@@ -66,27 +66,48 @@ document.addEventListener("keydown",function(e){
     }
 })
 
-document.addEventListener("wheel", (function throttle() {
-    var lastCallTime = 0;
-    var lastPanelChangeTime = 0;
+document.addEventListener("wheel", (
+    function throttle(e) {
+        handleMoveEvent(e.deltaY);
+    }
+));
 
-    return function (e) {
-        var currentTime = Date.now();
-        // Prevent sliding more than one panel in 500ms or if continuous scrolls have occured
-        if (currentTime - lastPanelChangeTime <= 500 || currentTime - lastCallTime <= 50) {
-            lastCallTime = currentTime;
+var yDown = null;                                                        
+document.addEventListener('touchstart', (
+    function handleTouchStart(e) {  
+        yDown = e.touches[0].clientY;
+    }
+));       
+
+document.addEventListener('touchmove', (
+    function handleTouchMove(e) {
+        if (! yDown ) {
             return;
         }
-        lastCallTime = currentTime;
-        lastPanelChangeTime = currentTime;
-        
-        if (e.deltaY <= 0) {
-            showPreviousPanel();
-        } else {
-            showNextPanel();
-        }
+        handleMoveEvent(yDown-e.touches[0].clientY);
+        yDown = null;                                                                                      
     }
-})());
+));        
+
+var lastCallTime = 0;
+var lastPanelChangeTime = 0;
+function handleMoveEvent(deltaY)
+{
+    var currentTime = Date.now();
+    // Prevent sliding more than one panel in 500ms or if continuous scrolls have occured
+    if (currentTime - lastPanelChangeTime <= 500 || currentTime - lastCallTime <= 50) {
+        lastCallTime = currentTime;
+        return;
+    }
+    lastCallTime = currentTime;
+    lastPanelChangeTime = currentTime;
+    
+    if (deltaY <= 0) {
+        showPreviousPanel();
+    } else {
+        showNextPanel();
+    }
+}
 
 function showNextPanel() {
     if (currentPanel < panels.length - 1) {
