@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Jérôme Parent-Lévesque - Web Developer</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Jérôme Parent-Lévesque</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/nav.css">        
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
     </head>
     <body>
@@ -13,7 +14,7 @@
                 <h1>Jérôme Parent-Lévesque</h1>
                 <p>Electrical Engineering Student
                     <br>
-                    Web Developer Enthusiast
+                    Web Development Wizard
                 </p>
                 <div id="nav-info">
                     <span>Navigation</span>
@@ -61,19 +62,16 @@
             </div>
         </div>
 
-        <div id="progress">
-            <div id="progress-bar"></div>
-            <div id="progress-content">
-                <a onclick="goToPanel(0)">Panel 1</a>
-                <a onclick="goToPanel(1)">Panel 2</a>
-                <a onclick="goToPanel(2)">Panel 3</a>
-                <a onclick="goToPanel(3)">Panel 4</a>
-                <a onclick="goToPanel(4)">Panel 5</a>
-                <a onclick="goToPanel(5)">Panel 6</a>
-            </div>
-        </div>
-
-
+        <div id="progress" class="">
+                <ul>
+                    <li  class ="current" onclick="goToPanel(0)" ><a href="#">Home</a></li>
+                    <li onclick="goToPanel(1)"><a href="#">About</a></li>
+                    <li onclick="goToPanel(2)"><a href="#">Products</a></li>
+                    <li onclick="goToPanel(3)"><a href="#">Portfolio</a></li>
+                    <li onclick="goToPanel(4)"><a href="#">Blog</a></li>
+                    <li onclick="goToPanel(5)"><a href="#">Contact</a></li>
+                </ul>
+        </div>   
         <script src="main.js"></script>
     </body>
 </html>

@@ -8,6 +8,9 @@ var panels = document.querySelectorAll(".panel");
 var initialPanelPositions = ["center"]; // The first panel will always be centered
 var currentPanel = 0;
 
+var navbarBtns = document.querySelectorAll("#progress li");
+
+
 var previousDir;
 var previousColor;
 
@@ -47,7 +50,6 @@ for (var i = 0; i < panels.length; i++) {
     BG_COLORS.splice(randColor, 1); // Remove the color so it isn't used anymore
 }
 
-updateProgressBar(); // Update the progress bar initially
 
 document.addEventListener("keydown",function(e){  
       switch(e.key){
@@ -114,7 +116,9 @@ function showNextPanel() {
         currentPanel++;
         var panel = panels[currentPanel];
         panel.className = "panel center";
-        updateProgressBar();
+
+        var panelBtn = navbarBtns[currentPanel];
+        panelBtn.className = "current";
     }
 }
 
@@ -122,8 +126,11 @@ function showPreviousPanel() {
     if (currentPanel > 0) {
         var panel = panels[currentPanel];
         panel.className = "panel " + initialPanelPositions[currentPanel];
+
+        var panelBtn = navbarBtns[currentPanel];
+        panelBtn.className = "";
+
         currentPanel--;
-        updateProgressBar();
     }
 }
 
@@ -134,9 +141,4 @@ function goToPanel(panelIndex) {
             nextPanel();
         }
     }
-}
-
-function updateProgressBar() {
-    var progressBar = document.querySelector("#progress-bar");
-    progressBar.style.width = ((currentPanel + 1) / panels.length * 100) + "%";
 }
