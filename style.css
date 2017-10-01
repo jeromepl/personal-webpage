@@ -7,6 +7,10 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    position: relative; /* Fix scrolling still enabled on mobile */
+}
+
 * {
     box-sizing: border-box;
 }
