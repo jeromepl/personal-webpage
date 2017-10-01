@@ -80,6 +80,13 @@ button:focus {
     right: 0;
 }
 
+#nav-info
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 #progress {
     display: flex;
     justify-content: center;
