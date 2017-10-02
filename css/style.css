@@ -114,19 +114,10 @@ button:focus {
     width: 30px;
     margin: 5px;
 }
-/*
-* Hide navigation help on mobile
-*/
-@media(max-width:699px)
-{
-    #nav-info{
-        visibility: hidden;
-    }
+
+
+@keyframes spin-vertical {
+    from { bottom: 50px; }
+    to { bottom: 35px; }
 }
-@media(min-width:700px)
-{
-    @keyframes spin-vertical {
-        from { bottom: 50px; }
-        to { bottom: 35px; }
-    }
-}
+
