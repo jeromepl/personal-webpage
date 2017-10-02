@@ -99,6 +99,7 @@ button:focus {
     animation-timing-function: ease-in-out;
     transition: bottom 0.8s;
     transition-timing-function: ease-in;
+    cursor: pointer;
 }
 
 #nav-info div {
@@ -112,7 +113,6 @@ button:focus {
     width: 30px;
     margin: 5px;
 }
-
 
 @keyframes spin-vertical {
     from { bottom: 50px; }
