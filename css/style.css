@@ -84,8 +84,7 @@ button:focus {
     right: 0;
 }
 
-#nav-info
-{
+#nav-info {
     position: fixed;
     width: 100%;
     bottom: 30px;
@@ -93,12 +92,11 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15px;    
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.64);
     z-index: 3;
     animation: spin-vertical 1s alternate infinite;
     animation-timing-function: ease-in-out;
-
     transition: bottom 0.8s;
     transition-timing-function: ease-in;
 }
@@ -106,7 +104,7 @@ button:focus {
 #nav-info div {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #nav-info img {
