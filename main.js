@@ -9,6 +9,7 @@ var initialPanelPositions = ["center"]; // The first panel will always be center
 var currentPanel = 0;
 
 var navbarBtns = document.querySelectorAll("#progress li");
+var navInfoEl = document.querySelector("#nav-info");
 
 
 var previousDir;
@@ -119,6 +120,12 @@ function showNextPanel() {
 
         var panelBtn = navbarBtns[currentPanel];
         panelBtn.className = "current";
+
+        // Remove the navigation helper
+        navInfoEl.style.animation = "none";
+        setTimeout(function() { // Timeout fixes a bug in Chrome where the bottom property would not animate
+            navInfoEl.style.bottom = "-100%";
+        }, 0);
     }
 }
 
