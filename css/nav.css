@@ -57,8 +57,12 @@
 	#progress li{
 		font-size: 10px;		
 	}
-	
+
 	#progress li .navTitle{
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
 		text-align: right;
 		position: relative;
 		right:25px;
