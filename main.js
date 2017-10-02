@@ -114,12 +114,17 @@ function handleMoveEvent(deltaY)
 
 function showNextPanel() {
     if (currentPanel < panels.length - 1) {
+        var panelBtn = navbarBtns[currentPanel];
+        panelBtn.querySelector(".navTitle").className = "navTitle";
+        
         currentPanel++;
         var panel = panels[currentPanel];
         panel.className = "panel center";
 
-        var panelBtn = navbarBtns[currentPanel];
+        panelBtn = navbarBtns[currentPanel];
         panelBtn.className = "current";
+
+        panelBtn.querySelector(".navTitle").className = "navTitle selected";
 
         // Remove the navigation helper
         navInfoEl.style.animation = "none";
@@ -137,7 +142,13 @@ function showPreviousPanel() {
         var panelBtn = navbarBtns[currentPanel];
         panelBtn.className = "";
 
+        panelBtn.querySelector(".navTitle").className = "navTitle";
+        
         currentPanel--;
+
+        panelBtn = navbarBtns[currentPanel];
+        panelBtn.querySelector(".navTitle").className = "navTitle selected";
+        
     }
 }
 
