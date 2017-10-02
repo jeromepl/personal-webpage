@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Jérôme Parent-Lévesque</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/nav.css">        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
-    </head>
-    <body>
-        <div id="panel-container">
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Development Wizard
-                </p>
-            </div>
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Developer Enthusiast
-                </p>
-            </div>
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Developer Enthusiast
-                </p>
-            </div>
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Developer Enthusiast
-                </p>
-            </div>
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Developer Enthusiast
-                </p>
-            </div>
-            <div class="panel">
-                <h1>Jérôme Parent-Lévesque</h1>
-                <p>Electrical Engineering Student
-                    <br>
-                    Web Developer Enthusiast
-                </p>
-                <button onclick="goToPanel(0)">Back to Top</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Jérôme Parent-Lévesque</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+</head>
+
+<body>
+    <div id="panel-container">
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Development Wizard
+            </p>
+            <div id="nav-info">
+                <span>Navigation</span>
+                <div class="help-icons">
+                    <img src="img/mouse.png" alt="" class="icon">
+                    <img src="img/arrow.png" alt="" class="icon">
+                </div>
             </div>
         </div>
-
-        <div id="nav-info">
-            <span>Navigation</span>
-            <div class="help-icons">
-                <img src="img/mouse.png" alt="Mouse Icon" class="icon">
-                <img src="img/arrow.png" alt="Arrow Keys Icon" class="icon">
-            </div>  
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Developer Enthusiast
+            </p>
         </div>
-
-        <div id="progress">
-            <ul>
-                <li  class ="current" onclick="goToPanel(0)" ><a href="#">Home</a></li>
-                <li onclick="goToPanel(1)"><a href="#">About</a></li>
-                <li onclick="goToPanel(2)"><a href="#">Products</a></li>
-                <li onclick="goToPanel(3)"><a href="#">Portfolio</a></li>
-                <li onclick="goToPanel(4)"><a href="#">Blog</a></li>
-                <li onclick="goToPanel(5)"><a href="#">Contact</a></li>
-            </ul>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Developer Enthusiast
+            </p>
         </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Developer Enthusiast
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Jérôme Parent-Lévesque</h1>
+            <p>Electrical Engineering Student
+                <br> Web Developer Enthusiast
+            </p>
+            <button onclick="goToPanel(0)">Back to Top</button>
+        </div>
+    </div>
 
+    <div id="progress" class="">
+        <ul>
+            <li class="current" onclick="goToPanel(0)"><a href="#">Home</a></li>
+            <li onclick="goToPanel(1)"><a href="#">About</a></li>
+            <li onclick="goToPanel(2)"><a href="#">Products</a></li>
+            <li onclick="goToPanel(3)"><a href="#">Portfolio</a></li>
+            <li onclick="goToPanel(4)"><a href="#">Blog</a></li>
+            <li onclick="goToPanel(5)"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
 
-        <script src="main.js"></script>
-    </body>
 </html>

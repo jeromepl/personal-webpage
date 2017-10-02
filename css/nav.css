@@ -1,26 +1,58 @@
-#progress {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 35px;
-    color: #e8e8e8;
-    width: 100%;
+@media(max-width:699px)
+{
+	#progress {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 35px;
+		color: #e8e8e8;
+		width: 100%;
+	}
+	
+	#progress ul {
+		display: flex;
+		flex-direction: row;    
+		align-items:center;
+		justify-content: space-between;
+		height:100%;
+		width:30%;
+	
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		cursor: default;
+	}
 }
 
-#progress ul {
-    display: flex;
-    flex-direction: row;    
-    align-items:center;
-    justify-content: space-between;
-    height:100%;
-    width:20%;
-
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	cursor: default;
+@media(min-width: 700px)
+{
+	#progress {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		right: 35px;
+		color: #e8e8e8;
+		height: 100%;
+	}
+	
+	#progress ul {
+		display: flex;
+		flex-direction: column;    
+		align-items:center;
+		justify-content: space-between;
+		width:100%;
+		height:30%;
+	
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		cursor: default;
+	}
 }
+
+
 
 #progress li {
 	position: relative;
