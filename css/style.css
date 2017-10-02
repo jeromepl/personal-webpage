@@ -57,12 +57,35 @@ button:focus {
     align-items: center;
     text-align: center;
     color: white;
+
     top: 0;
     left: 0;
     transition: left 1s, top 1s;
     transition-timing-function: ease;
 }
+.panel .data
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
 
+.panel .bg
+{
+    position: absolute;
+    width:105%;
+    height:105%;
+    background-size: 100% 100%; 
+    background-image: url("../img/bgp1.jpg");
+    filter: blur(10px);
+}
 .panel.right {
     left: 100%;
 }
