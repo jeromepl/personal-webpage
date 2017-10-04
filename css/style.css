@@ -59,8 +59,12 @@ button:focus {
     color: white;
     top: 0;
     left: 0;
-    transition: left 1s, top 1s;
-    transition-timing-function: ease;
+}
+
+.panel.init
+{
+    transition: left 1s, top 1s; 
+    transition-timing-function: ease;    
 }
 
 .panel.right {

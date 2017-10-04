@@ -51,6 +51,12 @@ for (var i = 0; i < panels.length; i++) {
     BG_COLORS.splice(randColor, 1); // Remove the color so it isn't used anymore
 }
 
+window.onload = function()
+{
+    for (var i = 0; i < panels.length; i++) {
+        panels[i].classList.add("init");
+    }
+}
 
 document.addEventListener("keydown",function(e){  
       switch(e.key){
