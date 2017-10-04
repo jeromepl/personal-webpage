@@ -1,3 +1,57 @@
+
+#progress {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 35px;
+	color: #e8e8e8;
+	height: 100%;
+}
+
+#progress ul {
+	display: flex;
+	flex-direction: column;    
+	align-items:center;
+	justify-content: space-between;
+	width:100%;
+	height:30%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+}
+
+#progress li {
+	position: relative;
+	display: block;
+	font-size: 10px;			
+	float: left;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+
+#progress li .navTitle{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	text-align: right;
+	position: relative;
+	right:25px;
+	bottom: 2px;
+}
+
+#progress li .navTitle.selected {
+	font-size: 15px;	
+}
+
+#progress li:hover{
+	font-size: 12px;
+}
+
 @media(max-width:699px)
 {
 	#progress {
@@ -29,63 +83,7 @@
 	}
 }
 
-@media(min-width: 700px)
-{
-	#progress {
-		display:flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		right: 35px;
-		color: #e8e8e8;
-		height: 100%;
-	}
-	
-	#progress ul {
-		display: flex;
-		flex-direction: column;    
-		align-items:center;
-		justify-content: space-between;
-		width:100%;
-		height:30%;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		cursor: default;
-	}
 
-	#progress li{
-		font-size: 10px;		
-	}
-
-	#progress li .navTitle{
-		-webkit-transition: all 0.3s ease;
-		-moz-transition: all 0.3s ease;
-		-o-transition: all 0.3s ease;
-		-ms-transition: all 0.3s ease;
-		text-align: right;
-		position: relative;
-		right:25px;
-		bottom: 2px;
-	}
-	
-	#progress li .navTitle.selected {
-		font-size: 15px;	
-	}
-	
-	#progress li:hover{
-		font-size: 12px;
-	}
-}
-
-#progress li {
-	position: relative;
-	display: block;
-	float: left;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
 
 #progress li:hover{
 	visibility: visible;
