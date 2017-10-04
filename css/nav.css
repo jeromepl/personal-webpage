@@ -36,16 +36,18 @@
 	transition: all 0.3s ease;
 	text-align: right;
 	position: relative;
-	right:25px;
+	font-size: 13px;
+	right: 25px;
 	bottom: 2px;
 }
 
 #progress li .navTitle.selected {
-	font-size: 15px;	
+	font-size: 18px;
+	bottom: 5px;
 }
 
-#progress li:hover {
-	font-size: 12px;
+#progress li .navTitle:not(.selected):hover {
+	font-size: 15px;
 }
 
 @media(max-width:699px)
