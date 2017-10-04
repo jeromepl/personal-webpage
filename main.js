@@ -40,9 +40,9 @@ for (var i = 0; i < panels.length; i++) {
                 break;
         }
         initialPanelPositions[i] = pos;
-        panels[i].className = "panel " + pos;
+        panels[i].classList.add(pos);
     } else {
-        panels[i].className = "panel " + initialPanelPositions[0];
+        panels[i].classList.add(initialPanelPositions[0]);
     }
 
     // Pick a random background color for each panel
@@ -115,16 +115,17 @@ function handleMoveEvent(deltaY)
 function showNextPanel() {
     if (currentPanel < panels.length - 1) {
         var panelBtn = navbarBtns[currentPanel];
-        panelBtn.querySelector(".navTitle").className = "navTitle";
+        panelBtn.querySelector(".navTitle").classList.remove("selected");
         
         currentPanel++;
         var panel = panels[currentPanel];
-        panel.className = "panel center";
+        panel.classList.remove("top", "left", "right", "bottom");
+        panel.classList.add("center");
 
         panelBtn = navbarBtns[currentPanel];
-        panelBtn.className = "current";
+        panelBtn.classList.add("current");
 
-        panelBtn.querySelector(".navTitle").className = "navTitle selected";
+        panelBtn.querySelector(".navTitle").classList.add("selected");
 
         // Remove the navigation helper
         navInfoEl.style.animation = "none";
@@ -137,17 +138,18 @@ function showNextPanel() {
 function showPreviousPanel() {
     if (currentPanel > 0) {
         var panel = panels[currentPanel];
-        panel.className = "panel " + initialPanelPositions[currentPanel];
+        panel.classList.remove("center");
+        panel.classList.add(initialPanelPositions[currentPanel]);
 
         var panelBtn = navbarBtns[currentPanel];
-        panelBtn.className = "";
+        panelBtn.classList.remove("current");
 
-        panelBtn.querySelector(".navTitle").className = "navTitle";
+        panelBtn.querySelector(".navTitle").classList.remove("selected");
         
         currentPanel--;
 
         panelBtn = navbarBtns[currentPanel];
-        panelBtn.querySelector(".navTitle").className = "navTitle selected";
+        panelBtn.querySelector(".navTitle").classList.add("selected");
         
     }
 }
