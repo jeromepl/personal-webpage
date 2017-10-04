@@ -88,6 +88,7 @@ button:focus {
     position: fixed;
     width: 100%;
     bottom: 30px;
+    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +98,7 @@ button:focus {
     z-index: 3;
     animation: spin-vertical 1s alternate infinite;
     animation-timing-function: ease-in-out;
-    transition: bottom 0.8s;
+    transition: bottom 0.8s, opacity 0.4s;
     transition-timing-function: ease-in;
     cursor: pointer;
 }

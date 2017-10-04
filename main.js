@@ -131,6 +131,7 @@ function showNextPanel() {
         navInfoEl.style.animation = "none";
         setTimeout(function() { // Timeout fixes a bug in Chrome where the bottom property would not animate
             navInfoEl.style.bottom = "-100%";
+            navInfoEl.style.opacity = 0;
         }, 0);
     }
 }
