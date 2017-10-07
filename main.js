@@ -121,7 +121,7 @@ function handleMoveEvent(deltaY)
 function showNextPanel() {
     if (currentPanel < panels.length - 1) {
         var panelBtn = navbarBtns[currentPanel];
-        panelBtn.querySelector(".navTitle").classList.remove("selected");
+        panelBtn.classList.remove("selected");
         
         currentPanel++;
         var panel = panels[currentPanel];
@@ -131,7 +131,7 @@ function showNextPanel() {
         panelBtn = navbarBtns[currentPanel];
         panelBtn.classList.add("current");
 
-        panelBtn.querySelector(".navTitle").classList.add("selected");
+        panelBtn.classList.add("selected");
 
         // Remove the navigation helper
         navInfoEl.style.animation = "none";
@@ -151,12 +151,12 @@ function showPreviousPanel() {
         var panelBtn = navbarBtns[currentPanel];
         panelBtn.classList.remove("current");
 
-        panelBtn.querySelector(".navTitle").classList.remove("selected");
+        panelBtn.classList.remove("selected");
         
         currentPanel--;
 
         panelBtn = navbarBtns[currentPanel];
-        panelBtn.querySelector(".navTitle").classList.add("selected");
+        panelBtn.classList.add("selected");
         
     }
 }
