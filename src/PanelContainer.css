@@ -1,0 +1,39 @@
+#nav-info {
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.64);
+    z-index: 3;
+    animation: spin-vertical 1s alternate infinite;
+    animation-timing-function: ease-in-out;
+    transition: bottom 0.8s, opacity 0.4s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+}
+
+#nav-info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#nav-info img {
+    height: 15px;
+    width: 30px;
+    margin: 5px;
+}
+
+@keyframes spin-vertical {
+    from {
+        bottom: 50px;
+    }
+    to {
+        bottom: 35px;
+    }
+}
