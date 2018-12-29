@@ -8,7 +8,6 @@ import './PanelContainer.css';
 const BG_COLORS = [
     // All possible background colors for panels
     '#1abc9c',
-    '#2ecc71',
     '#3498db',
     '#9b59b6',
     '#34495e',
@@ -121,7 +120,7 @@ export default class PanelContainer extends Component {
     }
 
     showNextPanel() {
-        if (this.state.currentPanelId < PanelContainer.countPanelChildren(this.props.children)) {
+        if (this.state.currentPanelId + 1 < PanelContainer.countPanelChildren(this.props.children)) {
             this.setState({ currentPanelId: this.state.currentPanelId + 1 });
         }
     }
