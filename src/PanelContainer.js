@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import tinycolor from 'tinycolor2';
 import Panel from './Panel.js';
 import NavBar from './NavBar';
 import arrowImg from './img/arrowDown.png';
@@ -28,7 +29,15 @@ const BG_COLORS = [
 const DIRECTIONS = ['right', 'left', 'top', 'bottom'];
 
 export default class PanelContainer extends Component {
-    panelAttributes = [];
+    panelAttributes = [
+        {
+            // The first panel will always be of the same color and be centered,
+            // just so that I can ensure a specific look for the first impression
+            color: '#3498db',
+            direction: 'center',
+            angle: Math.floor(Math.random() * 360)
+        }
+    ];
 
     yDown = null; // State variable for 'touchstart' and 'touchmove' handlers
 
@@ -128,24 +137,19 @@ export default class PanelContainer extends Component {
         // Generate new background colors and panel directions as needed
         while (this.panelAttributes.length < PanelContainer.countPanelChildren(this.props.children)) {
             let direction;
-            if (this.panelAttributes.length === 0) {
-                direction = 'center'; // Always just keep the first panel centered and static
-            } else {
-                do {
-                    // Make sure no two consecutive panels come from the same direction for a prettier result
-                    direction = DIRECTIONS[Math.floor(Math.random() * DIRECTIONS.length)];
-                } while (direction === this.panelAttributes[this.panelAttributes.length - 1].direction);
-            }
+            do {
+                // Make sure no two consecutive panels come from the same direction for a prettier result
+                direction = DIRECTIONS[Math.floor(Math.random() * DIRECTIONS.length)];
+            } while (direction === this.panelAttributes[this.panelAttributes.length - 1].direction);
 
             let color;
             do {
                 color = BG_COLORS[Math.floor(Math.random() * BG_COLORS.length)];
-            } while (
-                this.panelAttributes.length !== 0 &&
-                color === this.panelAttributes[this.panelAttributes.length - 1].color
-            );
+            } while (color === this.panelAttributes[this.panelAttributes.length - 1].color);
 
-            this.panelAttributes.push({ color, direction });
+            const angle = Math.floor(Math.random() * 360); // Generate a random orientation for the gradient
+
+            this.panelAttributes.push({ color, direction, angle });
         }
 
         // Add a background-color style prop to the Panel children
@@ -153,10 +157,14 @@ export default class PanelContainer extends Component {
         const children = React.Children.map(this.props.children, child => {
             if (child.type !== Panel) return child;
             panelIdx++;
-            const style = { ...child.style, backgroundColor: this.panelAttributes[panelIdx].color };
-            const direction =
-                panelIdx <= this.state.currentPanelId ? 'center' : this.panelAttributes[panelIdx].direction;
-            return React.cloneElement(child, { style, direction });
+            const { color, angle, direction } = this.panelAttributes[panelIdx];
+            const darkerColor = tinycolor(color)
+                .darken(15)
+                .toString();
+            const background = `linear-gradient(${angle}deg, ${color}, ${darkerColor})`;
+            const style = { ...child.style, background };
+            const currentDirection = panelIdx <= this.state.currentPanelId ? 'center' : direction;
+            return React.cloneElement(child, { style, direction: currentDirection });
         });
 
         let navArrowStyle = {};
