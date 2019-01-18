@@ -25,11 +25,24 @@ class App extends Component {
                             <NameSVG />
                             <p className="short-description">
                                 Master's Student in Computer Science in the{' '}
-                                <a href="https://mila.quebec/en/">MILA Lab</a>,
+                                <a href="https://mila.quebec/en/" target="_blank" rel="noopener noreferrer">
+                                    MILA Lab
+                                </a>
+                                ,
                                 <br />
                                 under Professor{' '}
-                                <a href="https://mila.quebec/en/person/aaron-courville/">Aaron Courville</a> and
-                                Professor <a href="http://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a>. <br />
+                                <a
+                                    href="https://mila.quebec/en/person/aaron-courville/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Aaron Courville
+                                </a>{' '}
+                                and Professor{' '}
+                                <a href="http://www.cim.mcgill.ca/~derek/" target="_blank" rel="noopener noreferrer">
+                                    Derek Nowrouzezahrai
+                                </a>
+                                . <br />
                                 ML Researcher &amp; Web Development Enthusiast
                             </p>
                         </div>
@@ -40,16 +53,35 @@ class App extends Component {
                             <div className="long-description">
                                 <h2>Hi!</h2>
                                 <p>
-                                    I am a Master's student at the <a href="https://mila.quebec/en/">MILA Lab</a>,
-                                    working under{' '}
-                                    <a href="https://mila.quebec/en/person/aaron-courville/">Aaron Courville</a> and{' '}
-                                    <a href="http://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a>. My research
-                                    focuses on Spherical CNNs: convolutional networks applied to spherical signals such
-                                    as earth and star maps. I hold a Bachelor's degree in Electrical Engineering from
-                                    McGill University where I graduated from the Honours program. During my Bachelor's,
-                                    I developed skills in various software engineering fields through{' '}
-                                    <a href="https://github.com/jeromepl">personal projects</a> and internships at
-                                    Amazon, Vigilant and the McGill DDMAL Lab.
+                                    I am a Master's student at the{' '}
+                                    <a href="https://mila.quebec/en/" target="_blank" rel="noopener noreferrer">
+                                        MILA Lab
+                                    </a>
+                                    , working under{' '}
+                                    <a
+                                        href="https://mila.quebec/en/person/aaron-courville/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Aaron Courville
+                                    </a>{' '}
+                                    and{' '}
+                                    <a
+                                        href="http://www.cim.mcgill.ca/~derek/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Derek Nowrouzezahrai
+                                    </a>
+                                    . My research focuses on Spherical CNNs: convolutional networks applied to spherical
+                                    signals such as earth and star maps. I hold a Bachelor's degree in Electrical
+                                    Engineering from McGill University where I graduated from the Honours program.
+                                    During my Bachelor's, I developed skills in various software engineering fields
+                                    through{' '}
+                                    <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
+                                        personal projects
+                                    </a>{' '}
+                                    and internships at Amazon, Vigilant and the McGill DDMAL Lab.
                                 </p>
                             </div>
                         </div>
@@ -57,13 +89,13 @@ class App extends Component {
                             Find out more about me and my projects using the following links!
                         </p>
                         <div className="social-network-links">
-                            <a href="https://github.com/jeromepl">
+                            <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-github fa-2x" />
                             </a>
-                            <a href="https://linkedin.com/in/jeromepl">
+                            <a href="https://linkedin.com/in/jeromepl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-linkedin fa-2x" />
                             </a>
-                            <a href="https://twitter.com/jerome_pl">
+                            <a href="https://twitter.com/jerome_pl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-twitter fa-2x" />
                             </a>
                         </div>
@@ -107,13 +139,13 @@ class App extends Component {
                     <Panel>
                         <h2>&copy; 2019 Jérôme Parent-Lévesque</h2>
                         <div className="social-network-links">
-                            <a href="https://github.com/jeromepl">
+                            <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-github fa-2x" />
                             </a>
-                            <a href="https://linkedin.com/in/jeromepl">
+                            <a href="https://linkedin.com/in/jeromepl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-linkedin fa-2x" />
                             </a>
-                            <a href="https://twitter.com/jerome_pl">
+                            <a href="https://twitter.com/jerome_pl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-twitter fa-2x" />
                             </a>
                         </div>

@@ -9,7 +9,7 @@ export default class Project extends Component {
                 <h2>{this.props.title}</h2>
                 <p>{this.props.description}</p>
 
-                <a href={this.props.githubUrl}>
+                <a href={this.props.githubUrl} target="_blank" rel="noopener noreferrer">
                     <img
                         src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
                         alt="Fork me on GitHub"
