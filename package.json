@@ -2,7 +2,7 @@
     "name": "personal-webpage",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://jeromepl.github.io/personal-webpage/",
+    "homepage": "https://jeromepl.com",
     "dependencies": {
         "font-awesome": "^4.7.0",
         "react": "^16.7.0",
