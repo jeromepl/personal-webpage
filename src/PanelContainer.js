@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import tinycolor from 'tinycolor2';
 import Panel from './Panel.js';
 import NavBar from './NavBar';
-import arrowImg from './img/arrowDown.png';
+import arrowImg from './res/arrowDown.png';
 import './PanelContainer.css';
 
 const BG_COLORS = [
     // All possible background colors for panels
     '#1abc9c',
     '#3498db',
-    '#9b59b6',
     '#34495e',
     '#16a085',
     '#27ae60',
@@ -38,9 +37,9 @@ export default class PanelContainer extends Component {
         }
     ];
 
-    yDown = null; // State variable for 'touchstart' and 'touchmove' handlers
+    yDown = null; // Variable used for 'touchstart' and 'touchmove' handlers
 
-    // State variables for handling move events:
+    // Variables used for handling move events:
     lastCallTime = 0;
     lastPanelChangeTime = 0;
 
