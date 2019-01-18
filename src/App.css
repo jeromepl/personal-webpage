@@ -74,7 +74,11 @@
         margin: 0;
     }
 
-    .long-description,
+    .long-description h2 {
+        font-size: 18px;
+    }
+
+    .long-description p,
     .find-more-text {
         font-size: 16px;
     }
@@ -92,7 +96,7 @@
         width: 95%;
     }
 
-    .long-description,
+    .long-description p,
     .find-more-text {
         font-size: 14px;
     }
