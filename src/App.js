@@ -92,7 +92,7 @@ class App extends Component {
                     </Panel>
                     <Panel>
                         <Project
-                            src="http://jeromepl.github.io/3D-audio-sphere/"
+                            src="https://jeromepl.github.io/3D-audio-sphere/"
                             title="Audio Sphere"
                             description="Full sound spectrum visualization on a 3D sphere with three.js"
                             githubUrl="https://github.com/jeromepl/3D-audio-sphere"
