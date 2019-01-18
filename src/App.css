@@ -136,9 +136,9 @@
 #name-e1 {
     stroke-dasharray: 22px;
     stroke-dashoffset: -22px;
-    animation: e1-anim 4s ease 0.5s forwards;
+    animation: animatione1 4s ease 0.5s forwards;
 }
-@keyframes e1-anim {
+@keyframes animatione1 {
     from {
         stroke-dashoffset: -22px;
         fill: transparent;
@@ -212,9 +212,9 @@
 #name-e2 {
     stroke-dasharray: 20px;
     stroke-dashoffset: -20px;
-    animation: e2-anim 4s ease 0.5s forwards;
+    animation: animatione2 4s ease 0.5s forwards;
 }
-@keyframes e2-anim {
+@keyframes animatione2 {
     from {
         stroke-dashoffset: -20px;
         fill: transparent;
@@ -288,9 +288,9 @@
 #name-e3 {
     stroke-dasharray: 22px;
     stroke-dashoffset: -22px;
-    animation: e3-anim 4s ease 0.5s forwards;
+    animation: animatione3 4s ease 0.5s forwards;
 }
-@keyframes e3-anim {
+@keyframes animatione3 {
     from {
         stroke-dashoffset: -22px;
         fill: transparent;
@@ -383,9 +383,9 @@
 #name-e4 {
     stroke-dasharray: 22px;
     stroke-dashoffset: -22px;
-    animation: e4-anim 4s ease 0.5s forwards;
+    animation: animatione4 4s ease 0.5s forwards;
 }
-@keyframes e4-anim {
+@keyframes animatione4 {
     from {
         stroke-dashoffset: -22px;
         fill: transparent;
@@ -421,9 +421,9 @@
 #name-e5 {
     stroke-dasharray: 22px;
     stroke-dashoffset: -22px;
-    animation: e5-anim 4s ease 0.5s forwards;
+    animation: animatione5 4s ease 0.5s forwards;
 }
-@keyframes e5-anim {
+@keyframes animatione5 {
     from {
         stroke-dashoffset: -22px;
         fill: transparent;
@@ -497,9 +497,9 @@
 #name-e6 {
     stroke-dasharray: 20px;
     stroke-dashoffset: -20px;
-    animation: e6-anim 4s ease 0.5s forwards;
+    animation: animatione6 4s ease 0.5s forwards;
 }
-@keyframes e6-anim {
+@keyframes animatione6 {
     from {
         stroke-dashoffset: -20px;
         fill: transparent;
