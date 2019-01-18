@@ -8,6 +8,7 @@
         "react": "^16.7.0",
         "react-dom": "^16.7.0",
         "react-scripts": "2.1.2",
+        "react-visibility-sensor": "^5.0.2",
         "tinycolor2": "^1.4.1"
     },
     "scripts": {

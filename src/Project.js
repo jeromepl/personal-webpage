@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import './Project.css';
 
 export default class Project extends Component {
@@ -14,7 +15,11 @@ export default class Project extends Component {
                         alt="Fork me on GitHub"
                     />
                 </a>
-                {this.props.src && <iframe src={this.props.src} title={this.props.title} />}
+                {this.props.src && (
+                    <VisibilitySensor partialVisibility={true}>
+                        {({ isVisible }) => <iframe src={isVisible ? this.props.src : ''} title={this.props.title} />}
+                    </VisibilitySensor>
+                )}
                 {this.props.video && (
                     <video controls>
                         <source src={this.props.video} type="video/mp4" />
