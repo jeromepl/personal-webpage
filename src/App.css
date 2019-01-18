@@ -4,7 +4,12 @@
     max-width: 1160px;
 }
 
-.short-description {
+.home-content svg {
+    overflow: visible;
+    transform: scale(1.4);
+}
+
+#name- .short-description {
     padding: 0 10px;
 }
 
@@ -58,6 +63,10 @@
 }
 
 @media (max-width: 899px) {
+    .home-content svg {
+        transform: scale(1);
+    }
+
     .profile-pic {
         float: none;
         width: 180px;
@@ -68,6 +77,12 @@
     .long-description,
     .find-more-text {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 816px) {
+    .home-content svg {
+        width: 300px;
     }
 }
 
@@ -89,5 +104,412 @@
     .resume iframe {
         width: 95%;
         margin-left: 0;
+    }
+}
+
+/* REPETITIVE SVG STUFF: */
+.home-content svg path {
+    stroke: white;
+    stroke-width: 0.15px;
+    fill: transparent;
+}
+
+#name-j1 {
+    stroke-dasharray: 41px;
+    stroke-dashoffset: -41px;
+    animation: j1-anim 4s ease 0.5s forwards;
+}
+@keyframes j1-anim {
+    0% {
+        stroke-dashoffset: -41px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e1 {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: -22px;
+    animation: e1-anim 4s ease 0.5s forwards;
+}
+@keyframes e1-anim {
+    from {
+        stroke-dashoffset: -22px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-r1 {
+    stroke-dasharray: 27px;
+    stroke-dashoffset: -27px;
+    animation: r1-anim 4s ease 0.5s forwards;
+}
+@keyframes r1-anim {
+    from {
+        stroke-dashoffset: -27px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-o1 {
+    stroke-dasharray: 18px;
+    stroke-dashoffset: -18px;
+    animation: o1-anim 4s ease 0.5s forwards;
+}
+@keyframes o1-anim {
+    from {
+        stroke-dashoffset: -18px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-m1 {
+    stroke-dasharray: 46px;
+    stroke-dashoffset: -46px;
+    animation: m1-anim 4s ease 0.5s forwards;
+}
+@keyframes m1-anim {
+    from {
+        stroke-dashoffset: -46px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e2 {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: -20px;
+    animation: e2-anim 4s ease 0.5s forwards;
+}
+@keyframes e2-anim {
+    from {
+        stroke-dashoffset: -20px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-p1 {
+    stroke-dasharray: 30px;
+    stroke-dashoffset: -30px;
+    animation: m1-anim 4s ease 0.5s forwards;
+}
+@keyframes m1-anim {
+    from {
+        stroke-dashoffset: -30px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-a1 {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: -22px;
+    animation: a1-anim 4s ease 0.5s forwards;
+}
+@keyframes a1-anim {
+    from {
+        stroke-dashoffset: -22px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-r2 {
+    stroke-dasharray: 27px;
+    stroke-dashoffset: -27px;
+    animation: r2-anim 4s ease 0.5s forwards;
+}
+@keyframes r2-anim {
+    from {
+        stroke-dashoffset: -27px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e3 {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: -22px;
+    animation: e3-anim 4s ease 0.5s forwards;
+}
+@keyframes e3-anim {
+    from {
+        stroke-dashoffset: -22px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-n1 {
+    stroke-dasharray: 31px;
+    stroke-dashoffset: -31px;
+    animation: n1-anim 4s ease 0.5s forwards;
+}
+@keyframes n1-anim {
+    from {
+        stroke-dashoffset: -31px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-t1 {
+    stroke-dasharray: 30px;
+    stroke-dashoffset: -30px;
+    animation: t1-anim 4s ease 0.5s forwards;
+}
+@keyframes t1-anim {
+    from {
+        stroke-dashoffset: -30px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-dash {
+    stroke-dasharray: 8px;
+    stroke-dashoffset: -8px;
+    animation: dash-anim 4s ease 0.5s forwards;
+}
+@keyframes dash-anim {
+    from {
+        stroke-dashoffset: -8px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-l1 {
+    stroke-dasharray: 45px;
+    stroke-dashoffset: -45px;
+    animation: l1-anim 4s ease 0.5s forwards;
+}
+@keyframes l1-anim {
+    from {
+        stroke-dashoffset: -45px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e4 {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: -22px;
+    animation: e4-anim 4s ease 0.5s forwards;
+}
+@keyframes e4-anim {
+    from {
+        stroke-dashoffset: -22px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-v1 {
+    stroke-dasharray: 25px;
+    stroke-dashoffset: -25px;
+    animation: v1-anim 4s ease 0.5s forwards;
+}
+@keyframes v1-anim {
+    from {
+        stroke-dashoffset: -25px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e5 {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: -22px;
+    animation: e5-anim 4s ease 0.5s forwards;
+}
+@keyframes e5-anim {
+    from {
+        stroke-dashoffset: -22px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-s1 {
+    stroke-dasharray: 25px;
+    stroke-dashoffset: -25px;
+    animation: s1-anim 4s ease 0.5s forwards;
+}
+@keyframes s1-anim {
+    from {
+        stroke-dashoffset: -25px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-q1 {
+    stroke-dasharray: 40px;
+    stroke-dashoffset: -40px;
+    animation: q1-anim 4s ease 0.5s forwards;
+}
+@keyframes q1-anim {
+    from {
+        stroke-dashoffset: -40px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-u1 {
+    stroke-dasharray: 29px;
+    stroke-dashoffset: -29px;
+    animation: u1-anim 4s ease 0.5s forwards;
+}
+@keyframes u1-anim {
+    from {
+        stroke-dashoffset: -29px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
+    }
+}
+#name-e6 {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: -20px;
+    animation: e6-anim 4s ease 0.5s forwards;
+}
+@keyframes e6-anim {
+    from {
+        stroke-dashoffset: -20px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0px;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+        fill: white;
     }
 }

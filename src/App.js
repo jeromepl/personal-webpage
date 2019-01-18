@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PanelContainer from './PanelContainer';
 import Panel from './Panel';
 import Project from './Project';
+import { ReactComponent as NameSVG } from './res/name.svg';
 import profileImg from './res/profile.png';
 import locomotionVid from './res/locomotion.mp4';
 import resume from './res/jeromepl-resume.pdf';
@@ -21,7 +22,7 @@ class App extends Component {
                 <PanelContainer ref={this.panelContainerRef} panelTitles={PANEL_TITLES}>
                     <Panel>
                         <div className="home-content">
-                            <h1>Jérôme Parent-Lévesque</h1>
+                            <NameSVG />
                             <p className="short-description">
                                 Master's Student in Computer Science in the{' '}
                                 <a href="https://mila.quebec/en/">MILA Lab</a>,
