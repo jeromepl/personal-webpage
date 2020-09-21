@@ -3,7 +3,7 @@ import PanelContainer from './PanelContainer';
 import Panel from './Panel';
 import Project from './Project';
 import { ReactComponent as NameSVG } from './res/name.svg';
-import profileImg from './res/profile.png';
+import profileImg from './res/profile.jpg';
 import locomotionVid from './res/locomotion.mp4';
 import resume from './res/jeromepl-resume.pdf';
 import './App.css';
@@ -30,20 +30,9 @@ class App extends Component {
                                 </a>
                                 ,
                                 <br />
-                                under Professor{' '}
-                                <a
-                                    href="https://mila.quebec/en/person/aaron-courville/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Aaron Courville
-                                </a>{' '}
-                                and Professor{' '}
-                                <a href="http://www.cim.mcgill.ca/~derek/" target="_blank" rel="noopener noreferrer">
-                                    Derek Nowrouzezahrai
-                                </a>
+                                graduating December 2020
                                 . <br />
-                                ML Researcher &amp; Web Development Enthusiast
+                                <strong>Machine Learning | Computer Graphics | Web Dev</strong>
                             </p>
                         </div>
                     </Panel>
@@ -51,7 +40,7 @@ class App extends Component {
                         <div className="about-content">
                             <img className="profile-pic" src={profileImg} alt="Profile" />
                             <div className="long-description">
-                                <h2>Hi!</h2>
+                                <h2>Bonjour / Hi!</h2>
                                 <p>
                                     I am a Master's student at the{' '}
                                     <a href="https://mila.quebec/en/" target="_blank" rel="noopener noreferrer">
@@ -73,20 +62,20 @@ class App extends Component {
                                     >
                                         Derek Nowrouzezahrai
                                     </a>
-                                    . My research focuses on Spherical CNNs: convolutional networks applied to spherical
-                                    signals such as earth and star maps. I hold a Bachelor's degree in Electrical
-                                    Engineering from McGill University where I graduated from the Honours program.
-                                    During my Bachelor's, I developed skills in various software engineering fields
+                                    . My research is at the intersection of Machine Learning and Computer Graphics and focuses on Differentiable Rendering, 
+                                    Unsupervised Inverse Graphics and 3D Object/Scene Representations suitable for Machine Learning. 
+                                    I hold a Bachelor's degree in Electrical Engineering from McGill University where I graduated from the Honours program.
+                                    During my Master's and Bachelor's, I developed skills in various software engineering fields
                                     through{' '}
                                     <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
                                         personal projects
                                     </a>{' '}
-                                    and internships at Amazon, Vigilant and the McGill DDMAL Lab.
+                                    and internships at Ubisoft, Amazon, Vigilant and the McGill DDMAL Lab.
                                 </p>
                             </div>
                         </div>
                         <p className="find-more-text">
-                            Find out more about me and my projects using the following links!
+                            Find out more about me and my projects using the following links! (or keep scrolling!)
                         </p>
                         <div className="social-network-links">
                             <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
