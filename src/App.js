@@ -126,7 +126,7 @@ class App extends Component {
                         </div>
                     </Panel>
                     <Panel>
-                        <h2>&copy; 2019 Jérôme Parent-Lévesque</h2>
+                        <h2>&copy; 2021 Jérôme Parent-Lévesque</h2>
                         <div className="social-network-links">
                             <a href="https://github.com/jeromepl" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-github fa-2x" />
