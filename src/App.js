@@ -139,6 +139,7 @@ class App extends Component {
                             </a>
                         </div>
                         <button onClick={() => this.panelContainerRef.current.goToPanel(0)}>Back to Top</button>
+                        <a href="https://github.com/jeromepl/personal-webpage">Fork this webpage on GitHub</a>
                     </Panel>
                 </PanelContainer>
             </>
